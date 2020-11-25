@@ -1,0 +1,15 @@
+name: 'Kolga Deploy'
+description: 'This action is used to execute Kolga deploy step'
+inputs:
+  track:
+    description: 'Track where to deploy eg. review, staging, stable'
+    required: true
+    default: 'review'
+runs:
+  using: 'docker'
+  image: 'docker://docker.anders.fi/anders/ci-configuration:dev-github-development-production'
+  entrypoint: /app/devops
+  args:
+    - deploy_application
+    - '--track'
+    - ${{ inputs.track }}
