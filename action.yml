@@ -7,7 +7,7 @@ inputs:
     default: 'review'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/andersinno/kolga:v3'
+  image: 'docker://ghcr.io/hi-fi/kolga:v3'
   entrypoint: /app/devops
   args:
     - deploy_application
