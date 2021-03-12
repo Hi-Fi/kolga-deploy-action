@@ -7,7 +7,7 @@ inputs:
     default: 'review'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/andersinno/kolga:212237601133c9911adac5289329a291523e167d-production'
+  image: 'docker://ghcr.io/andersinno/kolga:e3708a0aa7c1edd54c74778f2cadc7bed3b09108-production'
   entrypoint: /app/devops
   args:
     - deploy_application
